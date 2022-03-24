@@ -17,6 +17,21 @@
 </head>
 
 <body>
+
+  <div class="modal-start">
+    <div class="b-crib-logo">
+      <img alt="" src="assets/images/logo/logo01.png">
+      <div class="text">#0001</div>
+    </div>
+    <div class="b-zillow-logo">
+      <div class="text">brought to you by</div>
+      <img alt="" src="assets/images/logo/zillow-logo.png">
+    </div>
+    <div class="b-btns">
+      <a href="##" class="md-btn--slider">Let's play</a>
+    </div>
+  </div>
+
   <div class="ms-main-container">
     <!-- Preloader -->
     <div class="ms-preloader"></div>
@@ -96,10 +111,16 @@
               <div class="slide-inner--info">
                 <h1>Lafayette</h1>
                 <h2 class="info--sub-title">Louisana</h2>
-                <div class="b-circle">
-                  <div class="b-img" style="background-image: url('assets/images/hause/niko01.jpg')"></div>
-                  <div class="b-img" style="background-image: url('assets/images/hause/niko03.jpg')"></div>
-                  <div class="b-img" style="background-image: url('assets/images/hause/niko09.jpg')"></div>
+                <div id="gallery" class="b-circle">
+
+                  <img class="b-img" alt="image 1" src="assets/images/hause/niko01.jpg"
+                    data-image="assets/images/hause/niko01.jpg" data-description="image placeholder">
+
+                  <img class="b-img" alt="image 2" src="assets/images/hause/niko03.jpg"
+                    data-image="assets/images/hause/niko03.jpg" data-description="image placeholder">
+
+                  <img class="b-img" alt="image 3" src="assets/images/hause/niko09.jpg"
+                    data-image="assets/images/hause/niko09.jpg" data-description="image placeholder">
                 </div>
                 <div class="b-info-room">
                   <div class="info-room"><i class="fas fa-bed fa-fw"></i>3 Bed</div>
@@ -107,55 +128,50 @@
                   <div class="info-room"><i class="far fa-ruler-horizontal fa-fw"></i>1.535 sq ft</div>
                 </div>
 
-
                 <p class="text">
                   Upscale neighborhood<br>
                   30 minutes from New Orleans<br>
                   On a cull-de-sac<br>
                 </p>
 
-
-                <a href="#modalWindow" id="modalWindowClose"  class="md-btn--slider">Guess
-                  the Price</a>
-                 
+                <a href="#modalWindow" id="modalWindowClose" class="md-btn--slider">Guess the Price</a>
               </div>
             </div>
           </div>
           <div id="modalWindow" class="modal">
             <div class="modal_Body">
-        <a class="modal-close" href="#modalWindowClose"><i class="fal fa-times-hexagon fa-fw"></i></a>
+              <a class="modal-close" href="#modalWindowClose"><i class="fal fa-times-hexagon fa-fw"></i></a>
 
-        <h4 class="modal-sub-title">guess the price</h2>
-        <h3 class="modal-title">Lafayette, la</h1>
-        
-        
-        
-          <div class="b-price">
-						<input class="checkbox-budget" type="radio" name="budget" id="budget-1" checked>
-						<label class="for-checkbox-budget" for="budget-1">
-							<span data-hover="">$251,458</span>
-						</label><!--
+              <h4 class="modal-sub-title">guess the price</h2>
+                <h3 class="modal-title">Lafayette, la</h1>
+
+                  <div class="b-price">
+                    <input class="checkbox-budget" type="radio" name="budget" id="budget-1" checked>
+                    <label class="for-checkbox-budget" for="budget-1">
+                      <span data-hover="">$251,458</span>
+                    </label>
+                    <!--
 						--><input class="checkbox-budget" type="radio" name="budget" id="budget-2">
-						<label class="for-checkbox-budget" for="budget-2">							
-							<span data-hover="">$351,558</span>
-						</label><!--
+                    <label class="for-checkbox-budget" for="budget-2">
+                      <span data-hover="">$351,558</span>
+                    </label>
+                    <!--
 						--><input class="checkbox-budget" type="radio" name="budget" id="budget-3">
-						<label class="for-checkbox-budget" for="budget-3">							
-							<span data-hover="">$451,355</span>
-						</label><!--
+                    <label class="for-checkbox-budget" for="budget-3">
+                      <span data-hover="">$451,355</span>
+                    </label>
+                    <!--
 						--><input class="checkbox-budget" type="radio" name="budget" id="budget-4">
-						<label class="for-checkbox-budget" for="budget-4">							
-							<span data-hover="">$551,458</span>
-						</label>
-					</div>
-        
-            <div class="send-button">Send
-              <input type="submit" value="send">
+                    <label class="for-checkbox-budget" for="budget-4">
+                      <span data-hover="">$551,458</span>
+                    </label>
+                  </div>
+
+                  <div class="send-button">Send
+                    <input type="submit" value="send">
+                  </div>
             </div>
-              
-                
-            </div>
-        </div>
+          </div>
           <!-- Slide -->
           <div class="swiper-slide">
             <div class="slide-inner" data-swiper-parallax="45%">
@@ -271,9 +287,9 @@
               </div>
             </div>
           </div>
-         
+
         </div>
-         <div class="swiper-nav-btn">
+        <div class="swiper-nav-btn">
           <div class="swiper-button-prev swiper-button-white">prev</div>
           <div class="swiper-button-next swiper-button-white">next</div>
         </div>
@@ -308,6 +324,20 @@
   <script type="text/javascript" src='assets/js/plugins.min.js'></script>
   <!-- Main js -->
   <script type="text/javascript" src="assets/js/main.js"></script>
+  <script>
+
+    $(function () {
+
+      $('.b-btns .md-btn--slider').click(function () {
+
+        $('.modal-start').stop().fadeToggle();
+
+      });
+
+    });
+
+  </script>
+
 </body>
 
 </html>

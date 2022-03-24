@@ -745,17 +745,35 @@ p {
     color: #00ffe7;
 }
 .b-circle {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 2%;
+    /* display: inline-block; */
+    /* width: 100%; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* gap: 2%; */
     padding: 15px 0;
+}
+
+.ug-thumb-wrapper.ug-tile.ug-tile-clickable {
+    display: inline-block;
+    width: 110px !important;
+    height: 110px !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    border-radius: 300px;
+    margin: 1% !important;
+}
+
+.ug-tiles-wrapper {
+    height: auto !important;
 }
 .b-circle .b-img {
     width: 110px;
+    cursor: pointer;
     height: 110px;
     /* max-width: 110px; */
     /* max-height: 110px; */
@@ -766,8 +784,10 @@ p {
     box-shadow: 0px 0px 2px 0px #3a3a3a;
 }
 
-
 .b-img {}
+
+
+.b-circle .b-img {}
 .b-info-room {
     display: flex;
     flex-direction: row;
@@ -789,7 +809,7 @@ p {
 .slide-inner--info .text {
     font-weight: 400;
 }
-.slide-inner--info .md-btn--slider {
+.md-btn--slider {
     background: #ffb000;
     color: #000;
     font-weight: bold;
@@ -1028,7 +1048,7 @@ p {
     pointer-events: none;
 }
 .ug-thumb-wrapper.ug-tile.ug-tile-clickable.ug-thumb-ratio-set:hover .ug-thumb-image {
-    transform: scale(1.1) !important;
+    /* transform: scale(1.1) !important; */
 }
 
 /**
@@ -1274,6 +1294,42 @@ footer {
 }
 
 /* Modal */
+.modal-start {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    background: rgb(0 0 0 / 90%);
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.modal-start .text {}
+.b-zillow-logo {}
+.b-zillow-logo img {
+    max-width: 400px;
+    margin: 20px 0;
+}
+.b-zillow-logo .text {}
+
+.b-crib-logo {}
+.b-crib-logo img {
+    margin: 10px 0;
+}
+.b-crib-logo .text {
+    font-size: 24px;
+}
+
+
+
 .modal {
     position: fixed;
     display: none;
@@ -1283,12 +1339,15 @@ footer {
     left: 0;
     z-index: 1000;
     background: rgb(0 0 0 / 72%);
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 .modal:target {
     display: flex;
     pointer-events: auto;
 } 
+
+
+
 .modal_Body {
     position: relative;
     /* z-index: 500; */
@@ -1414,6 +1473,16 @@ input[type=checkbox], input[type=radio] {
  * 11. Responsive Rules
  */
  @media only screen and (max-width: 600px) {
+    .ug-thumb-wrapper.ug-tile.ug-tile-clickable {
+        display: inline-block;
+        width: 75px !important;
+        height: 75px !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        border-radius: 300px;
+        margin: 1% !important;
+    }
     .b-circle .b-img {
         width: 75px;
         height: 75px;
