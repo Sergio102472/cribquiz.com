@@ -784,10 +784,10 @@ p {
     box-shadow: 0px 0px 2px 0px #3a3a3a;
 }
 
-.b-img {}
 
 
-.b-circle .b-img {}
+
+
 .b-info-room {
     display: flex;
     flex-direction: row;
