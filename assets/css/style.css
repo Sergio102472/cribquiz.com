@@ -132,6 +132,8 @@ input[type="submit"] {
     margin: 0;
     cursor: pointer;
 }
+
+input[type="submit"]:hover {/* background: #e98400; */}
 input[type="submit"]:focus {
     outline: none;
 }
@@ -766,7 +768,9 @@ font-size: 48px;line-height: 53px;font-weight: 400;margin: 0;}
     left: auto !important;
     border-radius: 300px;
     margin: 1% !important;
-}
+border: 5px solid rgb(255 255 255 / 50%);background-color: transparent !important;}
+
+.ug-thumb-wrapper.ug-tile.ug-tile-clickable:hover {border: 5px solid rgb(255 255 255);}
 
 .ug-tiles-wrapper {
     height: auto !important;
@@ -782,7 +786,10 @@ font-size: 48px;line-height: 53px;font-weight: 400;margin: 0;}
     background-size: 130% 100%;
     -webkit-box-shadow: 0px 0px 2px 0px #5a5a5a;
     box-shadow: 0px 0px 2px 0px #3a3a3a;
-}
+border: 5px solid rgb(255 255 255 / 50%);
+    background-color: transparent !important;}
+
+.b-circle .b-img:hover {border: 5px solid rgb(255 255 255);}
 
 
 
@@ -818,7 +825,10 @@ font-size: 24px;padding: 0;margin: 24px 0 40px 0;line-height: 40px;}
     padding: 10px 20px 6px;
     text-transform: uppercase;
 }
-
+.md-btn--slider:hover {
+    background: #e98400;
+    color: #000;
+}
 .send-button {
     background: #ffb000;
     color: #000;
@@ -829,6 +839,8 @@ font-size: 24px;padding: 0;margin: 24px 0 40px 0;line-height: 40px;}
     position: relative;
     border-radius: 4px;
 }
+
+.send-button:hover {background: #e98400;}
 
 
 .swiper-slide-active .slide-inner--info {
@@ -922,7 +934,11 @@ margin: 11px 20px 0 0;}
     width: 24px;
     margin: 0 auto 0.2em;
     display: block;
-}
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);}
 
 /**
  * 5. Albums
@@ -1439,6 +1455,10 @@ input[type=checkbox], input[type=radio] {
 .checkbox-budget:checked + label {
     color: #ffffff;
 }
+
+label.for-checkbox-budget:hover {background: #a5a5a5;}
+
+.checkbox-budget:checked + label:hover {background: #a5a5a5;}
 .checkbox-budget:not(:checked) + label {
     background-color: #fff;
     /* box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%); */
@@ -1459,6 +1479,8 @@ input[type=checkbox], input[type=radio] {
     position: relative;
     display: block;
 }
+
+.checkbox-budget:not(:checked) + label span:hover {/* background: #f4f4f4; */background: #a5a5a5;}
 .checkbox-budget:checked + label span::before, .checkbox-budget:not(:checked) + label span::before {
     position: absolute;
     content: attr(data-hover);
